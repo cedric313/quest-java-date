@@ -22,11 +22,12 @@ class TestDate {
         
         
 
-        SimpleDateFormat sdf = new SimpleDateFormat();
+        SimpleDateFormat sdf = new SimpleDateFormat("MM-dd-yyyy");
         c = new GregorianCalendar(year,month -1,day);
         Date d = c.getTime();
-        System.out.println(sdf.format(d));
-        
+        int dayOfWeek = c.get(Calendar.DAY_OF_WEEK);       
+        System.out.println("The date is : " + sdf.format(d));
+        System.out.println("The day of week : "+ dayOfWeek);
 
 
         
