@@ -16,8 +16,19 @@ class TestDate {
         System.out.println("Please fill a year :");
         int year = sc.nextInt();
         sc.close();
-
+        
         // TODO : your code after this line
+        Calendar c = Calendar.getInstance();
+        
+        
+
+        SimpleDateFormat sdf = new SimpleDateFormat();
+        c = new GregorianCalendar(year,month -1,day);
+        Date d = c.getTime();
+        System.out.println(sdf.format(d));
+        
+
+
         
     }
 }
